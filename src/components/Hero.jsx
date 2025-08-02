@@ -6,7 +6,7 @@ import { section } from "framer-motion/client";
 const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
-      <div className="paddingX absolute inset-0 top-[120px] max-w-7xl mx-auto flex items-start gap-5">
+      <div className="paddingX absolute inset-0 top-[100px] max-w-7xl mx-auto flex items-start gap-5">
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
           <div className="w-1 h-36 sm:h-80 violet-gradient" />
@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute xs:bottom-2 max-xs:bottom-8 w-full flex items-center justify-center">
+      <div className="absolute xs:bottom-2 max-xs:bottom-20 w-full flex items-center justify-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] max-xs:h-[57px]  rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
