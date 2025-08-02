@@ -12,10 +12,10 @@ const Hero = () => {
           <div className="w-1 h-36 sm:h-80 violet-gradient" />
         </div>
         <div>
-          <h1 className="text-white heroHeadText">
+          <h1 className="text-white heroHeadText max-sm:leading-[50px]">
             Hi, I'm <span className="text-[#915eff]">Tayyab</span>
           </h1>
-          <p className="heroSubText mt-2 text-white-100">
+          <p className="heroSubText mt-2 text-white-100 max-xs:mt-4">
             I develop Full Stack, AI integrated{" "}
             <br className="sm:block hidden" />
             SaaS web applications
@@ -23,9 +23,9 @@ const Hero = () => {
         </div>
       </div>
       <ComputersCanvas />
-      <div className="absolute xs:bottom-2 bottom-40 w-full flex items-center justify-center">
+      <div className="absolute bottom-2 w-full flex items-center justify-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px]  rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] max-xs:h-[57px]  rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],
