@@ -7,7 +7,7 @@ const SectionWrapper = (Component, idName) =>
     return (
       <motion.section
         id={idName}
-        variants={staggerContainer(0.1, 0.5)}
+        variants={staggerContainer(0.1, 0.4)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.15 }}
