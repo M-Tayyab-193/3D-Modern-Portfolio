@@ -7,10 +7,10 @@ const SectionWrapper = (Component, idName) =>
     return (
       <motion.section
         id={idName}
-        variants={staggerContainer(0.1, 0.2)}
+        variants={staggerContainer(0.1, 0.5)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.25 }}
+        viewport={{ once: false, amount: 0.15 }}
         className={`padding max-w-7xl mx-auto relative z-0`}
       >
         <Component />
