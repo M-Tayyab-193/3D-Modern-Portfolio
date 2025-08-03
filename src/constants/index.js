@@ -13,6 +13,7 @@ import {
     nodejs,
     mongodb,
     git,
+    github,
     figma,
     docker,
     meta,
@@ -23,6 +24,9 @@ import {
     jobit,
     tripguide,
     threejs,
+    linkedin,
+    upwork,
+    github2
 } from "../assets";
 
 export const navLinks = [
@@ -37,6 +41,10 @@ export const navLinks = [
     {
         id: "contact",
         title: "Contact",
+    },
+    {
+        id: "projects",
+        title: "Projects",
     },
 ];
 
@@ -56,6 +64,30 @@ const services = [
     {
         title: "AI Integrated Developer",
         icon: creator,
+    },
+];
+
+const socials = [
+    {
+        name: "GitHub",
+        icon: github2,
+        color: 'border-white/70',
+        shadow: 'drop-shadow-white/50',
+        link: 'https://github.com/M-Tayyab-193'
+    },
+    {
+        name: "LinkedIn",
+        icon: linkedin,
+        color: 'border-blue-600/70',
+        shadow: 'drop-shadow-blue-600/50',
+        link: 'https://www.linkedin.com/in/mtayyab193'
+    },
+    {
+        name: "Upwork",
+        icon: upwork,
+        color: 'border-green-600/70',
+        shadow: 'drop-shadow-green-600/50',
+        link: 'https://www.upwork.com/freelancers/~017aa4e6e1ac7b5191'
     },
 ];
 
@@ -262,4 +294,4 @@ const projects = [
     },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, testimonials, projects, socials };

@@ -30,6 +30,11 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+
+import linkedin from "./socials/linkedin.png";
+import upwork from "./socials/upwork.png";
+import github2 from "./socials/github.png";
+
 export {
   logo,
   backend,
@@ -43,6 +48,9 @@ export {
   docker,
   figma,
   git,
+  linkedin,
+  upwork,
+  github2,
   html,
   javascript,
   mongodb,
@@ -59,4 +67,5 @@ export {
   carrent,
   jobit,
   tripguide,
+
 };

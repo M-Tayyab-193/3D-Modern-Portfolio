@@ -5,6 +5,9 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+// template_hlkvlr9
+// service_vybr1yu
+// B0HoOdyTBpJJ39Oup
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
@@ -15,8 +18,47 @@ const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    console.log(name, value);
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_vybr1yu",
+        "template_hlkvlr9",
+        {
+          from_name: form.name,
+          to_name: "Tayyab",
+          from_email: form.email,
+          to_email: "m.tayyab.92.work@gmail.com",
+          message: form.message,
+        },
+        "B0HoOdyTBpJJ39Oup"
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          setForm({
+            name: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setLoading(false);
+          alert("Failed to send message. Please try again.");
+        }
+      );
+  };
 
   return (
     <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 xl:gap-20 overflow-hidden ">
