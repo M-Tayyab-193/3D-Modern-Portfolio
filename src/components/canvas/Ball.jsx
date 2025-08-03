@@ -1,9 +1,57 @@
-import React from 'react'
+import React, { Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  Decal,
+  Float,
+  OrbitControls,
+  Preload,
+  useTexture,
+  Html,
+} from "@react-three/drei";
+import CanvasLoader from "../Loader";
 
-const Ball = () => {
+const Ball = (props) => {
+  const [decal] = useTexture([props.icon]);
+
   return (
-    <div>Ball</div>
-  )
-}
+    <Float speed={1.75} rotationIntensity={1} floatIntensity={2}>
+      <ambientLight intensity={0.6} />
+      <directionalLight position={[0, 0, 0.05]} />
+      <mesh castShadow receiveShadow scale={2.65}>
+        <icosahedronGeometry args={[1, 1]} />
+        <meshStandardMaterial
+          color="#fff8eb"
+          polygonOffset
+          polygonOffsetFactor={-5}
+          floatShading
+        />
+        <Decal
+          position={[0, 0, 1]}
+          rotation={[Math.PI * 2, 0, 6.25]}
+          flatShading
+          scale={1.1}
+          map={decal}
+        />
+      </mesh>
+    </Float>
+  );
+};
 
-export default Ball
+const BallCanvas = ({ icon }) => {
+  return (
+    <Canvas frameloop="demand" gl={{ preserveDrawingBuffer: true }}>
+      <Suspense
+        fallback={
+          <Html center>
+            <CanvasLoader />
+          </Html>
+        }
+      >
+        <OrbitControls enableZoom={false} />
+        <Ball icon={icon} />
+      </Suspense>
+      <Preload all />
+    </Canvas>
+  );
+};
+export default BallCanvas;
