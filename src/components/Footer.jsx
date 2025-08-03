@@ -1,8 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { socials } from "../constants";
-import { fadeIn } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
+const SocialCard = ({ social, index }) => (
+  <motion.div
+    className={`w-10 h-10 sm:w-15 sm:h-15 rounded-full p-1 bg-tertiary border-3 ${social.color} drop-shadow-lg ${social.shadow} hover:scale-115  transition-transform duration-300  cursor-pointer`}
+    key={social.name}
+    variants={fadeIn("down", "spring", index * 0.2, 0.5)}
+  >
+    <a href={social.link} target="_blank" rel="noopener noreferrer">
+      <img src={social.icon} alt="" className="w-full h-full object-contain" />
+    </a>
+  </motion.div>
+);
 const Footer = () => {
   return (
     <section
@@ -24,23 +35,17 @@ const Footer = () => {
             </a>
           </span>
         </p>
-        <div className="flex sm:gap-4 gap-2 justify-center items-center">
+        <motion.div
+          className="flex sm:gap-4 gap-2 justify-center items-center"
+          variants={textVariant(0.5)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.1 }}
+        >
           {socials.map((social, index) => (
-            <motion.div
-              className={`w-10 h-10 sm:w-15 sm:h-15 rounded-full p-1 bg-tertiary border-3 ${social.color} drop-shadow-lg ${social.shadow} hover:scale-115  transition-transform duration-300  cursor-pointer`}
-              key={social.name}
-              variants={fadeIn("left", "spring", index * 0.2, 0.5)}
-            >
-              <a href={social.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={social.icon}
-                  alt=""
-                  className="w-full h-full object-contain"
-                />
-              </a>
-            </motion.div>
+            <SocialCard key={social.name} social={social} index={index} />
           ))}
-        </div>
+        </motion.div>
         <p className=" text-[14px] sm:text-[17px] font-bold tracking-wide hidden lg:block">
           © 2025 | All Rights Reserved.
         </p>

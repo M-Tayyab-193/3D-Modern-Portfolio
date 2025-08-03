@@ -10,7 +10,7 @@ const Tech = () => {
     <div className="flex flex-wrap gap-10 justify-center">
       {technologies.map((tech, index) => (
         <motion.div
-          className="w-28 h-28 "
+          className="w-28 h-28 drop-shadow-xl drop-shadow-white/30 rounded-full"
           key={tech.name}
           variants={fadeIn("right", "spring", index * 0.2, 0.5)}
         >

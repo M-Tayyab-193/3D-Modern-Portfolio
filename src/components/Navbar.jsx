@@ -21,7 +21,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="logo"
-            className="w-[50px] h-[35px] object-cover rounded-full"
+            className="w-10 h-10 object-cover rounded-full"
           />
           <p className="text-white text-[18px] cursor-pointer font-bold flex -ml-1">
             Tayyab &nbsp;
@@ -34,7 +34,7 @@ const Navbar = () => {
               key={link.id}
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
+              } hover:text-white text-[18px] font-semibold cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
               <a href={`#${link.id}`}>{link.title}</a>
