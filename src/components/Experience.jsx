@@ -3,13 +3,14 @@ import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 import "react-vertical-timeline-component/style.min.css";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
+import { staggerContainer } from "../utils/motion";
 
-const ExperienceCard = ({ experience }) => {
+const ExperienceCard = ({ experience, index }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{ background: "#1d1836", color: "#fff" }}
@@ -26,22 +27,26 @@ const ExperienceCard = ({ experience }) => {
         </div>
       }
     >
-      <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
-        <p className="text-secondary text-[16px] font-semibold">
-          {experience.company_name}
-        </p>
-      </div>
-      <ul className="mt-5 list-disc ml-5 space-y-2">
-        {experience.points.map((point, index) => (
-          <li
-            key={`experience-point-${index}`}
-            className="text-white-100 text-[14px] pl-1 tracking-wider"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
+      <motion.div variants={fadeIn("right", "spring", index * 0.6, 1)}>
+        <div>
+          <h3 className="text-white text-[24px] font-bold">
+            {experience.title}
+          </h3>
+          <p className="text-secondary text-[16px] font-semibold">
+            {experience.company_name}
+          </p>
+        </div>
+        <ul className="mt-5 list-disc ml-5 space-y-2">
+          {experience.points.map((point, index) => (
+            <li
+              key={`experience-point-${index}`}
+              className="text-white-100 text-[14px] pl-1 tracking-wider"
+            >
+              {point}
+            </li>
+          ))}
+        </ul>
+      </motion.div>
     </VerticalTimelineElement>
   );
 };
@@ -51,12 +56,22 @@ const Experience = () => {
       <motion.div variants={textVariant(0.5)}>
         <p className="sectionSubText">WHAT I HAVE DONE SO FAR</p>
         <h2 className="sectionHeadText">Work Experience.</h2>
-
         <div className="mt-20 flex flex-col">
           <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <ExperienceCard key={index} experience={experience} />
-            ))}
+            <motion.div
+              variants={staggerContainer(0.5, 0.75)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.1 }}
+            >
+              {experiences.map((experience, index) => (
+                <ExperienceCard
+                  key={index}
+                  experience={experience}
+                  index={index}
+                />
+              ))}
+            </motion.div>
           </VerticalTimeline>
         </div>
       </motion.div>
