@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience, index }) => {
         </div>
       }
     >
-      <motion.div variants={fadeIn("right", "spring", index * 0.6, 1)}>
+      <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
         <div>
           <h3 className="text-white text-[24px] font-bold">
             {experience.title}
@@ -53,28 +53,17 @@ const ExperienceCard = ({ experience, index }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant(0.5)}>
+      <motion.div variants={textVariant(0.2)}>
         <p className="sectionSubText">WHAT I HAVE DONE SO FAR</p>
         <h2 className="sectionHeadText">Work Experience.</h2>
-        <div className="mt-20 flex flex-col">
-          <VerticalTimeline>
-            <motion.div
-              variants={staggerContainer(0.5, 0.75)}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.1 }}
-            >
-              {experiences.map((experience, index) => (
-                <ExperienceCard
-                  key={index}
-                  experience={experience}
-                  index={index}
-                />
-              ))}
-            </motion.div>
-          </VerticalTimeline>
-        </div>
       </motion.div>
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {experiences.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} index={index} />
+          ))}
+        </VerticalTimeline>
+      </div>
     </>
   );
 };
