@@ -9,6 +9,8 @@ import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { staggerContainer } from "../utils/motion";
+import { div } from "framer-motion/client";
+import { Tilt } from "react-tilt";
 
 const ExperienceCard = ({ experience, index }) => {
   return (
@@ -27,26 +29,31 @@ const ExperienceCard = ({ experience, index }) => {
         </div>
       }
     >
-      <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
-        <div>
-          <h3 className="text-white text-[24px] font-bold">
-            {experience.title}
-          </h3>
-          <p className="text-secondary text-[16px] font-semibold">
-            {experience.company_name}
-          </p>
-        </div>
-        <ul className="mt-5 list-disc ml-5 space-y-2">
-          {experience.points.map((point, index) => (
-            <li
-              key={`experience-point-${index}`}
-              className="text-white-100 text-[14px] pl-1 tracking-wider"
-            >
-              {point}
-            </li>
-          ))}
-        </ul>
-      </motion.div>
+      <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
+        <motion.div
+          variants={fadeIn("down", "spring", index * 0.5, 0.75)}
+          className="w-full rounded-2xl shadow-lg border-2 border-fuchsia-100/70 shadow-purple-500/40 p-4"
+        >
+          <div>
+            <h3 className="text-white text-[24px] font-bold">
+              {experience.title}
+            </h3>
+            <p className="text-secondary text-[16px] font-semibold">
+              {experience.company_name}
+            </p>
+          </div>
+          <ul className="mt-5 list-disc ml-5 space-y-2">
+            {experience.points.map((point, index) => (
+              <li
+                key={`experience-point-${index}`}
+                className="text-white-100 text-[14px] pl-1 tracking-wider"
+              >
+                {point}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
+      </Tilt>
     </VerticalTimelineElement>
   );
 };

@@ -23,15 +23,7 @@ const ProjectCard = ({
           max: 45,
           scale: 1,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border-1 border-l-purple-500 border-t-blue-500 border-r-yellow-600 border-b-lime-600 "
-        style={{
-          boxShadow: `
-      -5px 0 10px 0 rgba(168, 85, 247, 0.2),  
-      0 -5px 10px 0 rgba(59, 130, 246, 0.2), 
-      5px 0 10px 0 rgba(234, 179, 8, 0.2),    
-      0 5px 10px 0 rgba(132, 204, 22, 0.2)    
-    `,
-        }}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border-2 shadow-2xl border-fuchsia-100/70 shadow-purple-500/30 "
       >
         <div className="relative w-full h-[230px]">
           <img
