@@ -16,7 +16,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("down", "spring", index * 0.6, 0.75)}>
       <Tilt
         options={{
           speed: 450,
@@ -85,11 +85,17 @@ const Projects = () => {
           problem-solving, and a focus on delivering fast, effective MVPs.
         </motion.p>
       </div>
-      <div className="flex flex-wrap mt-20 gap-7">
+      <motion.div
+        className="flex flex-wrap mt-20 gap-7"
+        variants={textVariant(0.1)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.2 }}
+      >
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
-      </div>
+      </motion.div>
     </>
   );
 };
