@@ -34,7 +34,10 @@ import {
     resumeAnalyzer,
     gpt,
     homyfy,
-    nike
+    nike,
+    dep,
+    codeveda,
+    developersHub
 
 } from "../assets";
 
@@ -197,82 +200,83 @@ const technologies = [
 
 const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#383E56",
-        date: "March 2020 - April 2021",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#E6DEDD",
-        date: "Jan 2021 - Feb 2022",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
         title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        company_name: "Digital Empowerment Pakistan",
+        icon: dep,
         iconBg: "#383E56",
-        date: "Jan 2022 - Jan 2023",
+        date: "April 2024 - June 2024",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed beginner-friendly web projects using HTML, CSS, and JavaScript, gaining a strong foundation in front-end development.",
+            "Built an introductory React.js project to understand component structure, state management, and basic interactivity.",
+            "Collaborated with team members to improve project quality and ensure responsive design across devices.",
+            "Participated in peer code reviews, adopting clean code practices and version control workflows.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
+        title: "Full Stack Developer",
+        company_name: "Developers Hub Corporation",
+        icon: developersHub,
         iconBg: "#E6DEDD",
-        date: "Jan 2023 - Present",
+        date: "July 2025 - August 2025",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Designed and developed a fully functional, responsive e-commerce website with complete backend management.",
+            "Implemented a custom REST API and integrated a self-defined language feature to enhance product filtering.",
+            "Built the frontend using React.js, Tailwind CSS, and Cloudinary for media management.",
+            "Optimized user experience by ensuring cross-browser compatibility and responsive UI/UX design.",
+        ],
+    },
+    {
+        title: "Full Stack Developer",
+        company_name: "Codveda Technologies",
+        icon: codeveda,
+        iconBg: "#383E56",
+        date: "July 2025 - August 2025",
+        points: [
+            "Delivered three projects of varying difficulty — basic, intermediate, and advanced — covering full-stack development workflows.",
+            "Configured databases, backend APIs, and frontend connections using Axios in basic and intermediate projects.",
+            "Developed an advanced, fully functional full-stack application with complete backend logic and database integration.",
+            "Ensured clean architecture, optimized performance, and seamless API communication across all projects.",
+        ],
+    },
+    {
+        title: "Full Stack Developer",
+        company_name: "Developers Hub Corporation",
+        icon: developersHub,
+        iconBg: "#E6DEDD",
+        date: "August 2025 - Present",
+        points: [
+            "Developing 'Business Nexus', a professional networking platform for entrepreneurs and investors.",
+            "Implementing user registration, profile management, collaboration requests, and real-time chat using Socket.io.",
+            "Building a secure backend with Node.js, Express.js, MongoDB, and JWT authentication.",
+            "Integrating responsive frontend with React.js, Tailwind CSS, and Axios for seamless API communication.",
         ],
     },
 ];
 
+
 const testimonials = [
     {
         testimonial:
-            "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-        name: "Sara Lee",
-        designation: "CFO",
-        company: "Acme Co",
+            "Working with him was a game-changer for our online presence. He built a stunning platform that perfectly reflects our mission for digital empowerment in Pakistan.",
+        name: "Ayesha Khan",
+        designation: "CEO",
+        company: "Digital Empowerment Pakistan",
         image: "https://randomuser.me/api/portraits/women/4.jpg",
     },
     {
         testimonial:
-            "I've never met a web developer who truly cares about their clients' success like Rick does.",
-        name: "Chris Brown",
-        designation: "COO",
-        company: "DEF Corp",
+            "His attention to detail and ability to deliver on time exceeded our expectations. The platform he developed has streamlined our operations and boosted our outreach.",
+        name: "Ali Raza",
+        designation: "CEO",
+        company: "Developer's Hub Corporation",
         image: "https://randomuser.me/api/portraits/men/5.jpg",
     },
     {
         testimonial:
-            "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-        name: "Lisa Wang",
-        designation: "CTO",
-        company: "456 Enterprises",
+            "From concept to deployment, he guided us with innovative solutions and exceptional technical expertise. Our product is now faster, more secure, and user-friendly.",
+        name: "Sara Malik",
+        designation: "CEO",
+        company: "Codveda Technologies",
         image: "https://randomuser.me/api/portraits/women/6.jpg",
     },
 ];

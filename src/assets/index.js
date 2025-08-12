@@ -47,6 +47,10 @@ import startup from './projects/startups-app.png';
 
 import live from './live.png'
 
+import codeveda from './work/codveda.jpeg';
+import dep from './work/DEP.jpeg';
+import developersHub from './work/developershub.jpeg';
+
 export {
   logo,
   backend,
@@ -88,5 +92,8 @@ export {
   gpt,
   homyfy,
   nike,
-  live
+  live,
+  codeveda,
+  dep,
+  developersHub
 };
