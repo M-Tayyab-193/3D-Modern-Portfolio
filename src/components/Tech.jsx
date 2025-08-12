@@ -19,7 +19,7 @@ const Tech = () => {
       <div className="flex flex-wrap gap-10 justify-center">
         {technologies.map((tech, index) => (
           <motion.div
-            className={`w-10 h-10 sm:w-20 sm:h-20 rounded-full p-1 bg-tertiary border-3 ${tech.color} drop-shadow-lg ${tech.shadow} hover:${tech.hoverShadow} hover:scale-115  transition-transform duration-300 cursor-pointer animate-pulse`}
+            className={`w-15 h-15 sm:w-20 sm:h-20 rounded-full p-1 bg-tertiary border-3 ${tech.color} drop-shadow-lg ${tech.shadow} hover:${tech.hoverShadow} hover:scale-115  transition-transform duration-300 cursor-pointer animate-pulse`}
             key={tech.name}
             variants={fadeIn("right", "spring", index * 0.2, 0.5)}
           >
