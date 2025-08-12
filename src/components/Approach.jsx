@@ -2,14 +2,25 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { CanvasRevealEffect } from "./canvas/CanvasRevealEffect";
-
+import { textVariant, fadeIn } from "../utils/motion";
 const Approach = () => {
   return (
     <section className="w-full max-xs:py-6 py-16">
-      <p className="sectionSubText">From Concept to Completion</p>
-      <p className="sectionHeadText">My Approach.</p>
+      <motion.div
+        variants={textVariant(0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.1 }}
+      >
+        <p className="sectionSubText">From Concept to Completion</p>
+        <p className="sectionHeadText">My Approach.</p>
+      </motion.div>
+
       {/* remove bg-white dark:bg-black */}
-      <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-6">
+      <motion.div
+        className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-6"
+        variants={fadeIn("right", "spring", 0, 3)}
+      >
         {/* add des prop */}
         <Card
           title="Planning & Strategy"
@@ -59,7 +70,7 @@ const Approach = () => {
             colors={[[125, 211, 252]]}
           />
         </Card>
-      </div>
+      </motion.div>
     </section>
   );
 };

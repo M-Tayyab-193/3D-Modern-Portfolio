@@ -38,8 +38,8 @@ const App = () => {
       <Experience />
       <Tech />
       <Projects />
-      <Feedbacks />
       {!isMobile && <Approach />}
+      <Feedbacks />
 
       <div className="relative z-0">
         <Contact />
