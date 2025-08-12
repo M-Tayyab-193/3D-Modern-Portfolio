@@ -36,6 +36,17 @@ import linkedin from "./socials/linkedin.png";
 import upwork from "./socials/upwork.png";
 import github2 from "./socials/github.png";
 
+import chatApp from './projects/chat-app.png';
+import bgRemoval from './projects/bg-removal-app.png';
+import gpt from './projects/chatgpt-app.png';
+import homyfy from './projects/homyfy.png';
+import nike from './projects/nike-app.png';
+import resumeAnalyzer from './projects/resume-analyzer-app.png';
+import movie from './projects/movie-app.png';
+import startup from './projects/startups-app.png';
+
+import live from './live.png'
+
 export {
   logo,
   backend,
@@ -68,5 +79,14 @@ export {
   carrent,
   jobit,
   tripguide,
-  profile
+  profile,
+  bgRemoval,
+  startup,
+  chatApp,
+  movie,
+  resumeAnalyzer,
+  gpt,
+  homyfy,
+  nike,
+  live
 };

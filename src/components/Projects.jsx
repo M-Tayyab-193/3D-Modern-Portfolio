@@ -2,11 +2,12 @@ import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "../hoc";
-import { github } from "../assets";
+import { github, live } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 import { desc } from "framer-motion/client";
 
+import { Globe } from "lucide-react";
 const ProjectCard = ({
   index,
   name,
@@ -14,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  demo_link,
 }) => {
   return (
     <motion.div variants={fadeIn("down", "spring", index * 0.6, 0.75)}>
@@ -32,16 +34,26 @@ const ProjectCard = ({
             className="object-cover w-full h-full rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-              onClick={() => window.open(source_code_link, "_blank")}
-            >
-              <img
-                src={github}
-                alt="source code"
-                className="w-1/2 h-1/2 object-contain"
-              />
+          <div className="flex items-center justify-between px-2 w-full h-full">
+            <div className="w-10 h-10 absolute z-10 top-0 bottom-0 left-[81%]  flex justify-end m-3 card-img_hover ">
+              <div
+                className="black-gradient drop-shadow-lg drop-shadow-black/70 w-10 h-10 rounded-full flex justify-center items-center !cursor-pointer animate-pulse"
+                onClick={() => window.open(source_code_link, "_blank")}
+              >
+                <img
+                  src={github}
+                  alt="source code"
+                  className="w-1/2 h-1/2 object-contain !cursor-pointer"
+                />
+              </div>
+            </div>
+            <div className="w-10 h-10 absolute inset-0 z-10  flex justify-start m-3 card-img_hover">
+              <div
+                className="bg-sky-100 border-2 border-blue-500 drop-shadow-lg drop-shadow-blue-600/70 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer animate-pulse"
+                onClick={() => window.open(demo_link, "_blank")}
+              >
+                <Globe className="size-8 text-blue-600" />
+              </div>
             </div>
           </div>
         </div>

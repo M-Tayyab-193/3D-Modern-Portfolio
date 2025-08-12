@@ -26,7 +26,16 @@ import {
     nextjs,
     linkedin,
     upwork,
-    github2
+    github2,
+    bgRemoval,
+    startup,
+    chatApp,
+    movie,
+    resumeAnalyzer,
+    gpt,
+    homyfy,
+    nike
+
 } from "../assets";
 
 export const navLinks = [
@@ -270,68 +279,188 @@ const testimonials = [
 
 const projects = [
     {
-        name: "Car Rent",
+        name: "YC Directory - Pitch your Startups",
         description:
-            "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+            "A full-stack directory app built with Next.js 15, Sanity CMS, and NextAuth, featuring advanced rendering, real-time updates, authentication, and a fully responsive UI.",
         tags: [
             {
-                name: "react",
+                name: "NextJS",
                 color: "blue-text-gradient",
             },
             {
-                name: "mongodb",
+                name: "SanityCMS",
                 color: "green-text-gradient",
             },
             {
-                name: "tailwind",
+                name: "NextAuth",
                 color: "pink-text-gradient",
             },
         ],
-        image: carrent,
-        source_code_link: "https://github.com/",
+        image: startup,
+        source_code_link: "https://github.com/M-Tayyab-193/pitch-startups-nextjs-app",
+        demo_link: "https://pitch-startups-steel.vercel.app"
+    },
+
+    {
+        name: "AI-Powered ATS",
+        description:
+            "A serverless ATS built with React, TypeScript, Tailwind CSS, and Puter.js, offering AI-driven resume analysis, real-time feedback, and secure cloud storage without backend complexity.",
+        tags: [
+            {
+                name: "ReactJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "TypeScript",
+                color: "green-text-gradient",
+            },
+            {
+                name: "PuterJS",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: resumeAnalyzer,
+        source_code_link: "https://github.com/M-Tayyab-193/AI-Resume-Analyzer",
+        demo_link: "https://ai-resume-analyzer-ebon-sigma.vercel.app"
     },
     {
-        name: "Job IT",
+        name: "AI Background Removal SaaS",
         description:
-            "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+            "A MERN stack SaaS app with AI-powered background removal, Clerk authentication, credit-based usage, and Razorpay payment integration, deployed on Vercel for scalability.",
         tags: [
             {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "restapi",
+                name: "MERN",
                 color: "green-text-gradient",
             },
             {
-                name: "scss",
+                name: "ClerkAuth",
                 color: "pink-text-gradient",
             },
+            {
+                name: "TailwindCSS",
+                color: "blue-text-gradient",
+            },
         ],
-        image: jobit,
-        source_code_link: "https://github.com/",
+        image: bgRemoval,
+        source_code_link: "",
+        demo_link: "https://ai-bg-removal-zeta.vercel.app"
     },
     {
-        name: "Trip Guide",
+        name: "OpenAI ChatGPT Clone",
         description:
-            "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+            "A React-based AI chat app integrated with the OpenAI API, featuring dynamic AI responses, auto-scrolling chat, and a clean UI without user sign-in requirements.",
         tags: [
             {
-                name: "nextjs",
+                name: "ReactJS",
                 color: "blue-text-gradient",
             },
             {
-                name: "supabase",
+                name: "OpenAIAPI",
                 color: "green-text-gradient",
             },
             {
-                name: "css",
+                name: "CSS",
                 color: "pink-text-gradient",
             },
         ],
-        image: tripguide,
-        source_code_link: "https://github.com/",
+        image: gpt,
+        source_code_link: "https://github.com/M-Tayyab-193/Chatbot-GPT-Clone",
+        demo_link: "https://chatbot-gpt-clone.vercel.app"
     },
+    {
+        name: "Real-Time Chat App",
+        description:
+            "A MERN stack chat application with secure authentication, instant text/image messaging, online status, and unseen message notifications, powered by Socket.IO.",
+        tags: [
+            {
+                name: "MERN",
+                color: "green-text-gradient",
+            },
+            {
+                name: "socketio",
+                color: "pink-text-gradient",
+            },
+            {
+                name: "tailwindcss",
+                color: "blue-text-gradient",
+            },
+        ],
+        image: chatApp,
+        source_code_link: "https://github.com/M-Tayyab-193/real-time-chat-app",
+        demo_link: "real-time-chat-app-frontend-kohl.vercel.app"
+    },
+
+    {
+        name: "Homyfy - Accomodation Platform",
+        description:
+            "A localized Airbnb alternative for Pakistan, enabling budget-friendly short-term rentals with PKR support, local payments, and a culturally adapted booking experience.",
+        tags: [
+            {
+                name: "ReactJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "TailwindCSS",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Supabase",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: homyfy,
+        source_code_link: "https://github.com/M-Tayyab-193/Homyfy",
+        demo_link: "https://homyfy-rho.vercel.app"
+    },
+
+    {
+        name: "Movie Recommendation App",
+        description:
+            "A modern movie app built with React and Tailwind CSS, integrating TMDb API for search, trending movies via Appwrite backend, and optimized with input debouncing.",
+        tags: [
+            {
+                name: "ReactJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "TMDbAPI",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Appwrite",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: movie,
+        source_code_link: "https://github.com/M-Tayyab-193/Full-Stack-Movie-APP",
+        demo_link: "https://full-stack-movie-app-lilac.vercel.app"
+    },
+
+    {
+        name: "Nike Landing Page",
+        description:
+            "A responsive Nike landing page built with React and Tailwind CSS, featuring modern UI design, dark mode support, and optimized deployment on Hostinger.",
+        tags: [
+            {
+                name: "ReactJS",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "TailwindCSS",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Hostinger",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: nike,
+        source_code_link: "https://github.com/M-Tayyab-193/A-Modern-Nike-Clone-App",
+        demo_link: "https://nike-clone-app-bice.vercel.app"
+    },
+
+
+
 ];
 
 export { services, technologies, experiences, testimonials, projects, socials };
