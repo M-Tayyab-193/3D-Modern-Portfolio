@@ -25,7 +25,7 @@ const Navbar = () => {
           />
           <p className="text-white text-[18px] cursor-pointer font-bold flex -ml-1">
             Tayyab &nbsp;
-            <span className="sm:block hidden">| Web Developer</span>
+            <span className="sm:block hidden">| Full Stack Developer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex sm:flex-row gap-10">

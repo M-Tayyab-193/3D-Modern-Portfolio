@@ -32,7 +32,7 @@ const ExperienceCard = ({ experience, index }) => {
       <Tilt options={{ max: 45, scale: 1, speed: 450 }}>
         <motion.div
           variants={fadeIn("down", "spring", index * 0.5, 0.75)}
-          className="w-full rounded-2xl shadow-lg border-2 border-fuchsia-100/70 shadow-purple-500/40 p-4"
+          className="w-full rounded-2xl shadow-lg border-2 border-fuchsia-100/70 shadow-purple-500/40 p-4 mb-3"
         >
           <div>
             <h3 className="text-white text-[24px] font-bold">
