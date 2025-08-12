@@ -106,15 +106,29 @@ const socials = [
 
 const technologies = [
     {
-        name: "HTML 5",
-        icon: html,
-        color: 'border-orange-600/70',
-        shadow: 'drop-shadow-orange-600/60',
-        hoverShadow: 'hover:drop-shadow-orange-600/70',
+        name: "Next JS",
+        icon: nextjs,
+        color: 'border-white/70',
+        shadow: 'drop-shadow-white/60',
+        hoverShadow: 'hover:drop-shadow-white/70',
     },
     {
-        name: "CSS 3",
-        icon: css,
+        name: "React JS",
+        icon: reactjs,
+        color: 'border-sky-600/70',
+        shadow: 'drop-shadow-sky-600/60',
+        hoverShadow: 'hover:drop-shadow-sky-600/70',
+    },
+    {
+        name: "Node JS",
+        icon: nodejs,
+        color: 'border-green-700/70',
+        shadow: 'drop-shadow-green-700/60',
+        hoverShadow: 'hover:drop-shadow-green-700/70',
+    },
+    {
+        name: "TypeScript",
+        icon: typescript,
         color: 'border-blue-600/70',
         shadow: 'drop-shadow-blue-600/60',
         hoverShadow: 'hover:drop-shadow-blue-600/70',
@@ -127,26 +141,13 @@ const technologies = [
         hoverShadow: 'hover:drop-shadow-yellow-600/70',
     },
     {
-        name: "TypeScript",
-        icon: typescript,
-        color: 'border-blue-600/70',
-        shadow: 'drop-shadow-blue-600/60',
-        hoverShadow: 'hover:drop-shadow-blue-600/70',
+        name: "MongoDB",
+        icon: mongodb,
+        color: 'border-green-600/70',
+        shadow: 'drop-shadow-green-600/60',
+        hoverShadow: 'hover:drop-shadow-green-600/70',
     },
-    {
-        name: "React JS",
-        icon: reactjs,
-        color: 'border-sky-600/70',
-        shadow: 'drop-shadow-sky-600/60',
-        hoverShadow: 'hover:drop-shadow-sky-600/70',
-    },
-    {
-        name: "Redux Toolkit",
-        icon: redux,
-        color: 'border-purple-600/70',
-        shadow: 'drop-shadow-purple-600/60',
-        hoverShadow: 'hover:drop-shadow-purple-600/70',
-    },
+
     {
         name: "Tailwind CSS",
         icon: tailwind,
@@ -154,27 +155,15 @@ const technologies = [
         shadow: 'drop-shadow-sky-700/60',
         hoverShadow: 'hover:drop-shadow-sky-700/70',
     },
+
     {
-        name: "Node JS",
-        icon: nodejs,
-        color: 'border-green-700/70',
-        shadow: 'drop-shadow-green-700/60',
-        hoverShadow: 'hover:drop-shadow-green-700/70',
+        name: "Redux Toolkit",
+        icon: redux,
+        color: 'border-purple-600/70',
+        shadow: 'drop-shadow-purple-600/60',
+        hoverShadow: 'hover:drop-shadow-purple-600/70',
     },
-    {
-        name: "MongoDB",
-        icon: mongodb,
-        color: 'border-green-600/70',
-        shadow: 'drop-shadow-green-600/60',
-        hoverShadow: 'hover:drop-shadow-green-600/70',
-    },
-    {
-        name: "Next JS",
-        icon: nextjs,
-        color: 'border-white/70',
-        shadow: 'drop-shadow-white/60',
-        hoverShadow: 'hover:drop-shadow-white/70',
-    },
+
     {
         name: "git",
         icon: git,
@@ -196,6 +185,22 @@ const technologies = [
         shadow: 'drop-shadow-blue-600/60',
         hoverShadow: 'hover:drop-shadow-blue-600/70',
     },
+    {
+        name: "HTML 5",
+        icon: html,
+        color: 'border-orange-600/70',
+        shadow: 'drop-shadow-orange-600/60',
+        hoverShadow: 'hover:drop-shadow-orange-600/70',
+    },
+    {
+        name: "CSS 3",
+        icon: css,
+        color: 'border-blue-600/70',
+        shadow: 'drop-shadow-blue-600/60',
+        hoverShadow: 'hover:drop-shadow-blue-600/70',
+    },
+
+
 ];
 
 const experiences = [
