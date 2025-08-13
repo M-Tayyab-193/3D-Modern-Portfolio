@@ -290,7 +290,7 @@ const projects = [
     {
         name: "YC Directory - Pitch your Startups",
         description:
-            "A full-stack directory app built with Next.js 15, Sanity CMS, and NextAuth, featuring advanced rendering, real-time updates, authentication, and a fully responsive UI.",
+            "A full-stack directory app built with Next.js 15, Sanity CMS, and NextAuth, featuring advanced rendering, real-time updates, authentication, and a fully responsive UI. It provides a digital platform for startups to showcase their ideas and connect with investors.",
         tags: [
             {
                 name: "NextJS",
