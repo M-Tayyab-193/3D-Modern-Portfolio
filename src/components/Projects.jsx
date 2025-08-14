@@ -18,7 +18,7 @@ const ProjectCard = ({
   demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("down", "spring", index * 0.6, 0.75)}>
+    <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
           speed: 450,
@@ -27,7 +27,7 @@ const ProjectCard = ({
         }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border-2 shadow-2xl border-fuchsia-100/70 shadow-purple-500/30 "
       >
-        <div className="relative w-full h-[230px]">
+        <div className="relative z-10 w-full h-[230px]">
           <img
             src={image}
             alt={name}
@@ -102,7 +102,7 @@ const Projects = () => {
         variants={textVariant(0.1)}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: false, amount: 0.1 }}
       >
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
