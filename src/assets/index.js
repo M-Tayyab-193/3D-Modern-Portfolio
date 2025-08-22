@@ -44,7 +44,7 @@ import nike from './projects/nike-app.png';
 import resumeAnalyzer from './projects/resume-analyzer-app.png';
 import movie from './projects/movie-app.png';
 import startup from './projects/startups-app.png';
-
+import neuroPrep from './projects/neuroPrep.png'
 import live from './live.png'
 
 import codeveda from './work/codveda.jpeg';
@@ -95,5 +95,6 @@ export {
   live,
   codeveda,
   dep,
-  developersHub
+  developersHub,
+  neuroPrep
 };

@@ -37,7 +37,8 @@ import {
     nike,
     dep,
     codeveda,
-    developersHub
+    developersHub,
+    neuroPrep
 
 } from "../assets";
 
@@ -287,6 +288,29 @@ const testimonials = [
 ];
 
 const projects = [
+    {
+        name: "NeuroPrep - AI Mock Interview System",
+        description:
+            "An AI-powered platform designed to help job seekers practice coding interviews with real-time voice interaction, personalized feedback, and customizable interview sessions. Built with Next.js, Tailwind CSS, and Firebase, NeuroPrep enhances user confidence, technical proficiency, and job readiness through interactive mock interviews and AI-driven evaluations.",
+        tags: [
+            {
+                name: "Next.js",
+                color: "blue-text-gradient",
+            },
+            {
+                name: "TailwindCSS",
+                color: "green-text-gradient",
+            },
+            {
+                name: "Firebase",
+                color: "pink-text-gradient",
+            },
+        ],
+        image: neuroPrep,
+        source_code_link: "https://github.com/M-Tayyab-193/ai-interview-platform",
+        demo_link: "https://ai-interview-platform-eight-blue.vercel.app"
+    }
+    ,
     {
         name: "YC Directory - Pitch your Startups",
         description:
