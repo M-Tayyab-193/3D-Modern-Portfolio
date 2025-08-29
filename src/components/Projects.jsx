@@ -62,7 +62,7 @@ const ProjectCard = ({
           </button>
 
           <div className="flex items-center justify-between px-2 w-full h-full">
-            <div className="w-10 h-10 absolute z-10 top-0 bottom-0 left-[81%]  flex justify-end m-3 card-img_hover ">
+            <div className="w-10 h-10 absolute z-10 top-0 bottom-0 left-[78%]  flex justify-end m-3 card-img_hover ">
               <div
                 className="black-gradient drop-shadow-lg drop-shadow-black/70 w-10 h-10 rounded-full flex justify-center items-center !cursor-pointer animate-pulse"
                 onClick={() => window.open(source_code_link, "_blank")}
