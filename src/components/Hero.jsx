@@ -20,7 +20,8 @@ const Hero = ({ isMobile }) => {
           <p className="heroSubText mt-6  sm:mt-2 text-white-100 ">
             I develop Full Stack, AI integrated{" "}
             <br className="sm:block hidden" />
-            SaaS (problem based) web applications.
+            SaaS (problem based) web applications{" "}
+            <span className="font-bold animate-slow-ping -ml-3">│</span>
           </p>
         </div>
       </div>

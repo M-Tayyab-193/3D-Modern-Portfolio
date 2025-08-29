@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tilt } from "react-tilt";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SectionWrapper } from "../hoc";
 import { github, live } from "../assets";
 import { projects } from "../constants";
@@ -13,10 +13,16 @@ const ProjectCard = ({
   name,
   description,
   tags,
-  image,
+  images,
   source_code_link,
   demo_link,
 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length);
+  const prevImage = () =>
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+
   return (
     <motion.div variants={fadeIn("down", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -25,14 +31,35 @@ const ProjectCard = ({
           max: 45,
           scale: 1,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border-2 shadow-2xl border-fuchsia-100/70 shadow-purple-500/30 "
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full border-2 shadow-2xl border-fuchsia-100/80 shadow-purple-500/30 "
       >
         <div className="relative z-10 w-full h-[230px]">
-          <img
-            src={image}
-            alt={name}
-            className="object-cover w-full h-full rounded-2xl"
-          />
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentIndex}
+              src={images[currentIndex]}
+              alt={name}
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+            />
+          </AnimatePresence>
+
+          {/* 🔹 Prev / Next Buttons */}
+          <button
+            onClick={prevImage}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-black text-white px-2 py-1 rounded-full z-20 border-2 border-fuchsia-200/70 drop-shadow-xl drop-shadow-purple-500/50 cursor-pointer animate-pulse"
+          >
+            ◀
+          </button>
+          <button
+            onClick={nextImage}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-black text-white px-2 py-1 rounded-full z-20 border-2 border-fuchsia-200/70 drop-shadow-xl drop-shadow-purple-500/50 cursor-pointer animate-pulse"
+          >
+            ▶
+          </button>
 
           <div className="flex items-center justify-between px-2 w-full h-full">
             <div className="w-10 h-10 absolute z-10 top-0 bottom-0 left-[81%]  flex justify-end m-3 card-img_hover ">
